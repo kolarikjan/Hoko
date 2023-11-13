@@ -1,14 +1,21 @@
 .header {
-    &-extended {
-        background-image: url(../img/layout-header-home-background.png);
-        background-repeat: no-repeat;
-        background-size: cover;
+    background: linear-gradient(180deg, var(--dark-color) 75%, var(--light-color) 25%);
+    @media (max-width: $sm) {
+        background: linear-gradient(180deg, var(--dark-color) 85%, var(--light-color) 15%);
+    }
+    &-logo {
+        img {
+            max-width: 300px;
+            max-height: 75px;
+            @media (max-width: $sm) {
+                max-width: 225px;
+            }
+        }
     }
     &-menu {
         & > ul {
             gap: 2rem;
             row-gap: .5rem;
-            padding: 0 1.5rem;
             @include media("xxl") {
                 row-gap: .5rem;
             }
@@ -21,19 +28,30 @@
         }
         &-link {
             & > a {
-                color: var(--secondary-color) !important;
+                color: var(--tertiary-color) !important;
                 font-size: 16px;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: var(--light-color);
                 font-weight: 600;
-                display: flex;
-                align-items: center;
-                text-decoration: none !important;
-                padding: 0;
-                svg, svg path {
-                    fill: var(--secondary-color);
+                display: block;
+                font-family: "Barlow";
+                @media (max-width: $lg) {
+                    text-align: center;
+                    width: 100%;
                 }
                 svg {
-                    display: block;
+                    display: inline-block;
                     margin-left: .5rem;
+                    &, path {
+                        fill: var(--tertiary-color);
+                    }
+                }
+                &:hover {
+                    color: var(--highlight-color) !important;
+                    svg, svg path {
+                        fill: var(--highlight-color);
+                    }
                 }
             }
             
@@ -47,32 +65,33 @@
                 top: 100%;
                 width: 100%;
                 z-index: 9999;
+                width: max-content;
+                max-width: 300px;
                 @include media("lg") {
+                    width: auto;
                     position: unset;
                     padding: 0rem;
                 }
                 & > div {
                     background-color: var(--highlight-color);
-                    border-radius: var(--border-radius);
-                    padding: .75rem .75rem;
-                    @include media("lg") {
-                        background-color: transparent;
+                    padding: .75rem 1.25rem .75rem .75rem;
+                    @media (max-width: $lg) {
                         border: none;
-                        padding: 0;
+                        padding: .25rem .75rem;
                         @include widthFit();
-                        margin: 0 auto;
+                        margin: .5rem auto 0;
                     }
                 }
                 a {
                     display: flex;
                     text-decoration: none;
-                    color: var(--secondary-color);
+                    color: var(--primary-color);
                     transition-duration: 0.15s;
+                    font-weight: 500;
                     font-size: 15px;
                     padding: 0 .5rem;
-                    @include media("lg") {
-                        color: var(--secondary-color);
-                        font-weight: 300;
+                    @media (max-width: $lg) {
+                        text-align: center;
                     }
                     &:hover {
                         padding-left: 1rem;
@@ -83,7 +102,7 @@
                         flex-shrink: 0;
                         margin-top: 0.55rem;
                         &, path {
-                            fill: var(--secondary-color);
+                            fill: var(--primary-color);
                         }
                     }
                 }
@@ -94,7 +113,7 @@
         }
     }
     &-nav {
-        padding: 2.5rem 1.5rem;
+        padding: 2.5rem 0rem;
         @include media("xl") {
             flex-wrap: wrap;
             display: flex;
@@ -105,92 +124,6 @@
             justify-content: space-between;
             padding: 1.5rem 0;
         }
-    }
-    &-rightbox {
-        gap: 1rem;
-        @include media("lg") {
-            gap: .75rem;
-        }
-        .button {
-            font-weight: 600;
-        }
-        &-icons { 
-            gap: 1rem;
-            @include media("lg") {
-                gap: .75rem;
-            }
-            & > div {
-                border: 2px solid var(--border-color-light);
-                border-radius: 50%;
-                & > a {
-                    width: 48px;
-                    @include flexCenter();
-                    aspect-ratio: 1/1;
-                    color: var(--secondary-color);
-                    text-decoration: none !important;
-                    position: relative;
-                }
-                &:hover, &.active {
-                    background-color: var(--border-color-light);
-                }
-                img, svg {
-                    max-width: 35px;
-                    max-height: 35px;
-                    object-fit: scale-down;
-                }
-            }
-            &-dropdown {
-                position: relative;
-                margin-right: 1.45rem;
-                @include media("lg") {
-                    margin-right: 0;
-                }
-                & > a::after {
-                    position: absolute;
-                    right: -1.6rem;
-                    content: url("../../img/icons/icon-arrow-default.svg");
-                }
-                &-content {
-                    display: none;
-                    padding-top: .5rem;
-                    position: absolute;
-                    z-index: 9999;
-                    top: 100%;
-                    width: 100%;
-                    & > div {
-                        background-color: var(--highlight-color);
-                        border-radius: var(--border-radius);
-                        padding: .75rem 1rem;
-                        ul {
-                            li {
-                                &:not(:last-child) a {
-                                    margin-bottom: .5rem;
-                                }
-                                a {
-                                    display: block;
-                                    transition-duration: 0.15s;
-                                    &:hover {
-                                        filter: drop-shadow(0px 0px 4px var(--secondary-color));
-                                    }
-                                    img {
-                                        border-radius: 50%;
-                                        width: 20px;
-                                        height: 20px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                &:hover &-content {
-                    display: block;
-                }
-            }
-        }
-    }
-    .navbar-toggler {
-        margin: 0 !important;
-        padding: 0 !important;
     }
     .animated-icon {
         width: 30px;
@@ -223,7 +156,7 @@
             -moz-transition: .25s ease-in-out;
             -o-transition: .25s ease-in-out;
             transition: .25s ease-in-out;
-            background: var(--secondary-color);
+            background: var(--light-color);
             &:nth-child(1) {
                 top: 0px;
             }
@@ -291,7 +224,6 @@
             }
             form {
                 input {
-                    border-radius: var(--button-radius);
                     padding: .875rem 4.5rem .875rem 1.5rem;
                     width: 250px;
                     margin-right: 4rem;

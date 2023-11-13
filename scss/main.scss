@@ -10,9 +10,49 @@ Author's url: www.jan-kolarik.cz
 @import "defaults/functions";
 
 // Page Components
+@import "components/banner";
+@import "components/aboutus";
+@import "components/section";
+@import "components/wedo";
+@import "components/button";
+@import "components/copyright";
+@import "components/news";
 
 // Pages
+
 
 // Layouts
 @import "layout/header";
 @import "layout/footer";
+
+
+// Styling
+
+@media (min-width: $md) {
+    .container-left {
+        margin-left: auto;
+        margin-right: 0;
+        padding-right: 0;
+        max-width: calc(1420px + (50% - 1420px / 2)); ;
+    }
+}
+@media (max-width: $xxl) {
+    .container-left {
+        max-width: calc(1100px + (50% - 1100px / 2)); ;
+    }
+}
+@media (max-width: $xl) {
+    .container-left {
+        max-width: calc(960px + (50% - 960px / 2)); ;
+    }
+}
+@media (max-width: $lg) {
+    .container-left {
+        max-width: calc(720px + (50% - 720px / 2)); ;
+    }
+}
+@media (max-width: $md) {
+    .container-left {
+        max-width: 720px;
+    }
+}

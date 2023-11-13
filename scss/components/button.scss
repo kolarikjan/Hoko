@@ -1,0 +1,48 @@
+.button {
+    font-size: 15px;
+    font-weight: 500;
+    @include flexCenter();
+    @include widthFit();
+    flex-wrap: wrap;
+    gap: .75rem;
+    border-radius: var(--border-radius);
+    padding: .75rem 1.25rem;
+    svg {
+        flex-shrink: 0;
+        &, path {
+            transition-duration: 0.1s;
+        }
+    }
+    &-large {
+        text-transform: uppercase;
+        padding: .75rem 1.25rem;
+    }
+    &-highlight {
+        background-color: var(--highlight-color);
+        border: 1px solid var(--highlight-color);
+        width: fit-content;
+        color: var(--light-color);
+        text-decoration: none !important;
+        svg, svg path {
+            fill: var(--light-color);
+        }
+        &:hover {
+            background-color: transparent;
+            color: var(--highlight-color);
+            svg, svg path {
+                fill: var(--highlight-color);
+            }
+        }
+    }
+    &-bordered {
+        &-grey {
+            border: 1px solid var(--border-color);
+            color: var(--secondary-color) !important;
+            gap: 1.25rem;
+            &:hover {
+                text-decoration: none;
+                background-color: var(--border-color);
+            }
+        }
+    }
+}

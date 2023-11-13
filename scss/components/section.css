@@ -1,0 +1,22 @@
+.section {
+  padding: 6rem 0;
+}
+.section-spacing-reduce {
+  padding: 4rem 0;
+}
+.section-output > *:first-child {
+  margin-top: 0;
+}
+.section-output > *:last-child {
+  margin-bottom: 0;
+}
+.section-output h3 {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 700;
+}
+.section-output p {
+  font-size: 17px;
+  line-height: 29px;
+  font-weight: 400;
+}/*# sourceMappingURL=section.css.map */

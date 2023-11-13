@@ -1,0 +1,36 @@
+.wedo-item a {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+.wedo-item a img {
+  width: 100%;
+  max-height: 330px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition-duration: 0.3s;
+}
+.wedo-item a span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  text-transform: uppercase;
+  color: var(--light-color);
+  font-weight: 700;
+  font-family: var(--font2);
+  transition-duration: 0.3s;
+}
+.wedo-item a:hover img {
+  transform: scale(1.1);
+}
+.wedo-item a:hover span {
+  font-size: 24px;
+}
+.wedo-row {
+  margin: 0 -1.5rem;
+}
+.wedo-row > div {
+  padding: 0 1.5rem;
+}/*# sourceMappingURL=wedo.css.map */

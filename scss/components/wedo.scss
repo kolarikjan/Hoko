@@ -1,0 +1,49 @@
+.wedo {
+    &-item {
+        a {
+            position: relative;
+            overflow: hidden;
+            display: block;
+            img {
+                width: 100%;
+                max-height: 330px;
+                object-fit: cover;
+                transition-duration: 0.3s;
+            }
+            span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                font-size: 22px;
+                text-transform: uppercase;
+                color: var(--light-color);
+                font-weight: 700;
+                font-family: var(--font2);
+                transition-duration: 0.3s;
+            }
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+                span {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    &-row {
+        margin: 0 -1.5rem;
+        row-gap: 3rem;
+        & > div {
+            padding: 0 1.5rem;
+        }
+        @media (max-width: $xl) {
+            margin: 0 -.5rem;
+            row-gap: 1rem;
+            & > div {
+                padding: 0 .5rem;
+            }
+        }
+    }
+}

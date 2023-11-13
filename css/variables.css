@@ -1,51 +1,20 @@
 :root {
-    --highlight-color: #4bbbeb;
-    --button-color: #4bbbeb;
-    --highlight-color2: #723e98;
-    --background-color: #ffffff;
-    --dropdown-color: #f3f3f3;
-    --dropdown-icon-color: #cdcdcd;
-    --dropdown-content-color: #fbfbfb;
+    --highlight-color: #b7cd19;
+
     --primary-color: #000;
-    --secondary-color: #ffffff;
-    --tertiary-color: #001b49;
-    --secondary-color-opacity: #ffffff57;
-    --border-color-light: #4bbbeb30;
-    --border-color: #dbdbdb;
-    --paragraph-color: #6c6c6c;
-    --section-color: #f3f3f3;
-    --section-color2: #22242b;
-    --light-color: #7688a8;
+    --secondary-color: #646464;
+    --tertiary-color: #c6c6c6;
 
-    --table-color: #f6f9fc;
-    --table-header-color: #e8f2fc;
-    --menu-color: #000;
-    --background-secondary-color: #f2f5fb;
-    --section-preTitle-background-color: #f4f4f4;
-    --section2-preTitle-background2-color: #ffffff;
-    --section-preTitle-color: #575656;
-    --services-boxes-color: #f1f8fd;
-    --news-date-color: #ababab;
-    --news-border-color: #eaecf0;
-    --highlight-light-color: #e4f5fc;
-    --socials-icon-color: #343434;
-    --footer-icon-color: #808080;
-    --footer-color: #c9b6a6;
-    --copyright-color: #a2a2a2;
-    --numbers-number-color: #394b80;
-    --link-color: #394b80;
-    --numbers-number-background: #fff;
-    
-    --font: "Poppins", sans-serif;
-    --font2: "Poppins", sans-serif;
-    --button-radius: 25px;
-    --border-radius: 15px;
-    --small-radius: 5px;
-    --gallery-radius: 10px;
-    --popup-radius: 15px;
-    --line-color-light: #ffffff38;
+    --dark-color: #3f3f3f;
+    --light-color: #fff;
 
-    --banner-homepage-background: url("../img/section-banner-background.png");
-    --footer-background: url("../img/footer-background.png");
+    --section-color: #f5f5f5;
+
+    --border-color: #dddddd;
+
+    --border-radius: 3px;
+
+    --font: "Barlow", sans-serif;
+    --font2: "Montserrat", sans-serif;
 }
   
